@@ -1,0 +1,21 @@
+{
+    "$schema": "layout_schema.json",
+    "data": [{
+        "type": "AD1",
+        "url": "json/tab_finance/ad1.json",
+        "name": "轮播图"
+    }, {
+        "type": "MENU",
+        "url": "json/tab_finance/menu.json",
+        "name": "菜单"
+    },{
+        "type": "NOTICED",
+        "url": "json/tab_finance/noticed.json",
+        "name": "公告"
+    },{
+        "type": "FINANCE",
+        "url": "json/tab_finance/financeList.json",
+        "name": "理财列表"
+    }
+    ]
+}

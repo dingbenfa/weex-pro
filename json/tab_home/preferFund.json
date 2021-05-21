@@ -1,0 +1,42 @@
+{
+    "$schema": "hot_finance_schema.json",
+    "data": {
+        "fundList": [{
+                "fundName": "富国新动力(001508)",
+                "rate": "3.88%",
+                "description": "近一年最高",
+                "fundType": "指数基金",
+                "fundLabel": "0.72",
+                "backgroundcolor":{
+                    "background-color": "#FF5C5C"
+                }
+                
+        
+            },
+            {
+                "fundName": "富国新动力(001508)",
+                "rate": "3.88%",
+                "description": "近一年最高",
+                "fundType": "指数基金",
+                "fundLabel": "低风险",
+                "backgroundcolor":{
+                    "background-color": "#FEB74D"
+                }
+
+            }
+            ,
+            {
+                "fundName": "富国新动力(001508)",
+                "rate": "3.88%",
+                "description": "近一年最高",
+                "fundType": "指数基金",
+                "fundLabel": "抗跌神器  舍我其谁",
+                "backgroundcolor":{
+                    "background-color": "#5488FB"
+                }
+                
+
+            }
+        ]
+    }
+}

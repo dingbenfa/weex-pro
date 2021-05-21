@@ -1,0 +1,31 @@
+{
+    "$schema": "madp_cell_schema.json",
+    "data": [{
+            "cell": [{
+                "title": "财富积分",
+                "url": ""
+            }]
+        }, {
+            "cell": [{
+                "title": "常见问题",
+                "url": ""
+            }, {
+                "title": "安全中心",
+                "url": "main.SecurityCenter"
+            }, {
+                "title": "版本信息",
+                "url": ""
+            }, {
+                "title": "我要分享",
+                "url": ""
+            }]
+        },
+        {
+            "cell": [{
+                "title": "联系我们",
+                "content": "0575-96528",
+                "url": ""
+            }]
+        }
+    ]
+}

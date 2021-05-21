@@ -1,0 +1,26 @@
+{
+    "$schema": "menu_schema.json",
+    "data": {
+        "menuList": [
+            {
+                "url": "main.locationHome",
+                "src": "imgs/easyRent/home/housingRelease.png",
+                "name": "发布房源"
+            },
+            {
+                "url": "main.QRdraw",
+                "src": "imgs/easyRent/home/houseSelection.png",
+                "name": "房源筛选"
+            }
+            
+        ],
+        "menuItem": {
+            "bgImg":"",
+            "columns": 2,
+            "imgWidth": 52,
+            "imgHeight": 52,
+            "fontSize": 24,
+            "fontColor": "rgba(102,102,102,0.9)"
+        }
+    }
+}

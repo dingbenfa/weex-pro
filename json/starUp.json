@@ -1,0 +1,19 @@
+{
+    "$schema": "starUp.json",
+    "data": [{
+            "name": "",
+            "src": "./imgs/starUp/star_0.png",
+            "url": ""
+        },
+        {
+            "name": "",
+            "src": "./imgs/starUp/star_1.png",
+            "url": ""
+        },
+        {
+            "name": "",
+            "src": "./imgs/starUp/star_2.png",
+            "url": ""
+        }
+    ]
+}

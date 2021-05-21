@@ -1,0 +1,27 @@
+{
+    "$schema": "website_schema.json",
+    "data": {
+        "message": {
+            "name": "唐山银行越城支行",
+            "time": "周一到周日 09:30-21:30",
+            "address": "越城区劳动路20号"
+        },
+        "webImg": {
+            "name": "网点图片",
+            "url": "",
+            "src": "./imgs/tab_life/website/right_img.png"
+        },
+        "search": {
+            "title": "搜索",
+            "url": ""
+        },
+        "order": {
+            "title": "预定",
+            "url": ""
+        },
+        "route": {
+            "title": "路线",
+            "url": ""
+        }
+    }
+}

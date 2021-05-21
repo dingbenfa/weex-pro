@@ -1,0 +1,28 @@
+{
+    "$schema": "gold_topic_schema.json",
+    "data": {
+        "newsList": [{
+            "label": "股票",
+            "url": "http://www.csii.com.cn",
+            "src": "imgs/tab_finance/hot/hot1@2x.png",
+            "title": "赌球危险！",
+            "short": "天台很挤，要给股民留位置,欢迎使用唐山银行理财",
+            "time": "1小时前",
+            "eyesrc": "imgs/eye.png",
+            "seenNum": "131",
+            "newsitem": "投资理财",
+            "key":"赌球危险！天台很挤，要给股民留位置,欢迎使用唐山银行理财,tangshanyinhanglicai"
+        }, {
+            "label": "投资理财",
+            "url": "http://www.csii.com.cn",
+            "src": "imgs/tab_finance/hot/hot2@2x.png",
+            "title": "股市危险！",
+            "short": "天台很挤，要给球迷留位置,欢迎使用唐山银行活动",
+            "time": "1小时前",
+            "eyesrc": "imgs/eye.png",
+            "seenNum": "159",
+            "newsitem": "今日头条",
+            "key":"股市危险！天台很挤，要给球迷留位置,tangshanyinhanghuodong"
+        }]
+    }
+}

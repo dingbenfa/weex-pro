@@ -1,0 +1,20 @@
+{
+    "$schema": "hot_finance_schema.json",
+    "data": {
+        "details": {
+            "title": "更多",
+            "url": "main.plnv"
+        },
+        "financeList": [{
+                "name": "芝米天添赢",
+                "rate": 4.88,
+                "isHot":"true"
+            },
+            {
+                "name": "亨利多理财",
+                "rate": 3.60,
+                "isHot":"true"
+            }
+        ]
+    }
+}

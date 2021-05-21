@@ -1,0 +1,28 @@
+{
+    "$schema": "ad_schema.json",
+    "data": {
+    	"menuList":[
+    		{
+    			"name":"安全",
+    			"src":"./imgs/finance/lcimg1.png",
+    			"url":"",
+    			"context":"银行牌照"
+    		},
+    		{
+    			"name":"收益",
+    			"src":"./imgs/finance/lcimg2.png",
+    			"url":"",
+    			"context":"最高1.875%"
+    		},
+    		{
+    			"name":"便捷",
+    			"src":"./imgs/finance/lcimg3.png",
+    			"url":"",
+    			"context":"随时支取"
+    		}
+    	],
+        "menuItem": {
+            "columns": 3
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "$schema": "tab_schema.json",
+    "data": {
+        "selectedColor": "rgb(8,39,65)",
+        "unselectedColor": "rgb(177,182,200)",
+        "tabs": [{
+                "title": "首页",
+                "image": "imgs/launcher/home.png",
+                "selectedImage": "imgs/launcher/home_on.png",
+                "src": "/weex/index.weex.js?Page=Tab_home",
+                "visibility": "visible"
+            },
+            {
+                "title": "理财",
+                "image": "imgs/launcher/finance.png",
+                "selectedImage": "imgs/launcher/finance_on.png",
+                "src": "/weex/index.weex.js?Page=Tab_finance",
+                "visibility": "hidden"
+            },
+            {
+                "title": "生活",
+                "image": "imgs/launcher/life.png",
+                "selectedImage": "imgs/launcher/life_on.png",
+                "src": "/weex/index.weex.js?Page=Tab_life",
+                "visibility": "hidden"
+            },
+            {
+                "title": "我的",
+                "image": "imgs/launcher/user.png",
+                "selectedImage": "imgs/launcher/user_on.png",
+                "src": "/weex/index.weex.js?Page=Tab_user",
+                "visibility": "hidden"
+            }
+        ]
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "$schema": "menu_schema.json",
+    "data": {
+        "menuList": [{
+            "url": "main.myFinance",
+            "src": "imgs/tab_finance/menu/wdlc.png",
+            "name": "我的理财"
+        }, {
+            "url": "main.webView",
+            "src": "imgs/tab_finance/menu/xxpl.png",
+            "name": "信息披露"
+        }, {
+            "url": "main.riskRating",
+            "src": "imgs/tab_finance/menu/fxpg.png",
+            "name": "风险评估"
+        }, {
+            "url": "main.webView",
+            "src": "imgs/tab_finance/menu/cpjz.png",
+            "name": "产品净值"
+        }
+        ],
+        "menuItem": {
+            "bgImg":"",
+            "columns": 4,
+            "imgWidth": 65,
+            "imgHeight": 60,
+            "fontSize": 22,
+            "fontColor": "rgba(90,105,118,0.9)"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "$schema": "hot_finance_schema.json",
+    "data": {
+        "details": {
+            "title": "更多",
+            "url": "main.financeHome"
+        },
+        "financeList": [
+        	{
+                "rateType": "年化收益率",
+                "rate": "4.10",
+                "detail":"月月赢02号开放式理财产品",
+            	"payType":"5000元起投 | 无固定期限"
+           },{
+                "rateType": "年化收益率",
+                "rate": "4.11",
+                "detail":"月月赢02号开放式理财产品",
+            	"payType":"5000元起投 | 无固定期限"
+            },{
+                "rateType": "年化收益率",
+                "rate": "4.02",
+                "detail":"月月赢02号开放式理财产品",
+            	"payType":"5000元起投 | 无固定期限"
+            }
+        ]
+    }
+}

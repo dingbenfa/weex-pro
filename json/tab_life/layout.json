@@ -1,0 +1,19 @@
+{
+    "$schema": "layout_schema.json",
+    "data": [{
+            "type": "AD",
+            "url": "json/tab_life/ad.json",
+            "name": "广告"
+        },
+        {
+            "type": "MENU",
+            "url": "json/tab_life/menulife.json",
+            "name": "菜单"
+        },
+        {
+            "type": "TOPUP",
+            "url": "json/tab_life/phone.json",
+            "name": "手机充值菜单"
+        }
+    ]
+}

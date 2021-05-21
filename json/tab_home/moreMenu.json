@@ -1,0 +1,127 @@
+{
+    "$schema": "img_menu_schema.json",
+    "data": [{
+            "title": "账户",
+            "menuList": [{
+                    "url": "main.myCountList",
+                    "src": "imgs/tab_home/menu/zzhk.png",
+                    "name": "我的账户"
+                },
+                {
+                    "url": "main.PActLostOne",
+                    "src": "imgs/tab_home/menu/zhgl.png",
+                    "name": "账户挂失"
+                },
+                {
+                    "url": "main.pactTrs",
+                    "src": "imgs/tab_home/menu/jymx.png",
+                    "name": "交易明细"
+                },
+                {
+                    "url": "main.changeCardQueryHome",
+                    "name": "换卡查询",
+                    "src": "imgs/tab_home/menu/icon_hkcx.png"
+                }
+            ]
+        },
+        {
+            "title": "支付",
+            "menuList": [{
+                    "url": "main.pmtransferInOrOut",
+                    "src": "imgs/tab_finance/menu/wdlc.png",
+                    "name": "银行账户转账"
+                },
+                {
+                    "url": "main.payeeAddress",
+                    "src": "imgs/tab_home/more/skrmc.png",
+                    "name": "收款人名册"
+                },
+                {
+                    "url": "main.ptrsRecordQry",
+                    "src": "imgs/tab_home/more/zzjl.png",
+                    "name": "转账记录"
+                }
+            ]
+        },
+        {
+            "title": "财富",
+            "menuList": [{
+                    "url": "main.Tab_finance?isBack=true",
+                    "src": "imgs/deposit/menu/jjg.png",
+                    "name": "投资理财"
+                },
+                {
+                    "url": "main.depositHome",
+                    "src": "imgs/tab_home/menu/cktz.png",
+                    "name": "储蓄产品"
+                },
+                {
+                    "url": "main.riskRating",
+                    "src": "imgs/tab_finance/menu/fxpg.png",
+                    "name": "风险评估"
+                },
+                {
+                    "url": "main.cecHome",
+                    "src": "imgs/tab_finance/menu/cec.png",
+                    "name": "超e存"
+                }
+            ]
+        },
+        {
+            "title": "贷款",
+            "menuList": [{
+                "url": "main.Loans",
+                "src": "imgs/tab_home/dk/chaoe.png",
+                "name": "超e贷"
+            }]
+        },
+        {
+            "title": "生活",
+            "menuList": [{
+                    "url": "main.Tab_life?isBack=true",
+                    "src": "imgs/tab_home/more/shjf.png",
+                    "name": "生活缴费"
+                },
+                {
+                    "url": "main.locationHome",
+                    "src": "imgs/tab_life/menulife/wdcx.png",
+                    "name": "网点预约"
+                },
+                {
+                    "url": "",
+                    "src": "imgs/tab_home/more/smqk.png",
+                    "name": "扫码取款"
+                },
+                {
+                    "url": "main.msgCenter",
+                    "src": "imgs/tab_home/dk/xxzx.png",
+                    "name": "消息中心"
+                }
+            ]
+        },
+        {
+            "title": "设置",
+            "menuList": [{
+                    "url": "main.ChangePwd",
+                    "src": "imgs/tab_home/more/dlmmxg.png",
+                    "name": "登录密码修改"
+                },
+                {
+                    "url": "main.shouShi",
+                    "src": "imgs/tab_home/more/ssmmxg.png",
+                    "name": "手势密码"
+                },
+                {
+                    "url": "main.zhiWen",
+                    "src": "imgs/tab_home/more/zwmmkg.png",
+                    "name": "指纹/面容密码"
+                },
+                {
+                    "url": "main.limitSetting",
+                    "src": "imgs/tab_home/more/zzqxsz.png",
+                    "name": "转账限额设置"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "$schema": "titlebar_schema.json",
+    "data": {
+        "leftElement": {
+            "exist": false,
+            "back": {
+                "exist": false,
+                "src": "./imgs/tab_user/titlebar/back.png",
+                "url": ""
+            },
+            "head": {
+                "exist": false,
+                "src": "./imgs/tab_user/titlebar/head.png",
+                "url": ""
+            },
+            "qrcode": {
+                "exist": true,
+                "src": "./imgs/tab_user/titlebar/qrcode@3x.png",
+                "url": ""
+            }
+        },
+        "centerElement": {
+            "exist": true,
+            "title": {
+                "exist": true,
+                "text": "我的"
+            },
+            "logo": {
+                "exist": false,
+                "src": "./imgs/tab_user/titlebar/logo@3x.png",
+                "url": ""
+            }
+        },
+        "rightElement": {
+            "exist": true,
+            "login": {
+                "exist": false,
+                "src": "./imgs/tab_user/titlebar/login@3x.png",
+                "url": ""
+            },
+            "titl": {
+                "exist": true,
+                "text": "安全退出"
+            }
+        }
+    }
+}

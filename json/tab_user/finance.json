@@ -1,0 +1,11 @@
+{
+  "$schema": "finance_schema.json",
+  "data": [{
+     "src": "./imgs/tab_user/homepage/man@3x.png",
+      "column": "中午好，韩不归",
+      "puton":"上次登录时间：2018-04-03 20:36",
+      "pic":"./imgs/tab_user/homepage/white@3x.png",
+      "clone":"预留信息：我叫韩不归"
+    }
+  ]
+}

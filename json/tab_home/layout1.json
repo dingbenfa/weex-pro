@@ -1,0 +1,24 @@
+{
+    "$schema": "layout_schema.json",
+    "data": [{
+        "type": "AD",
+        "url": "json/tab_home/ad.json",
+        "name": "广告"
+    }, {
+        "type": "MENU",
+        "url": "json/tab_home/menu.json",
+        "name": "菜单"
+    }, {
+        "type": "NOTICE",
+        "url": "json/tab_home/notice.json",
+        "name": "公告"
+    },{
+        "type": "AD1",
+        "url": "json/tab_home/ad1.json",
+        "name": "热销理财"
+    },{
+        "type": "INTELL",
+        "url": "json/tab_home/finRecommend.json",
+        "name": "智能推荐"
+    }]
+}

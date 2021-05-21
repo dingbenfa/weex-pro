@@ -1,0 +1,16 @@
+{
+    "$schema": "layout_schema.json",
+    "data": [{
+        "type": "AD",
+        "url": "json/easyRent/home/ad.json",
+        "name": "广告"
+    }, {
+        "type": "MENU",
+        "url": "json/easyRent/home/menu.json",
+        "name": "菜单"
+    },{
+        "type": "LIST",
+        "url": "json/easyRent/home/houseLIst.json",
+        "name": "房源信息"
+    }]
+}

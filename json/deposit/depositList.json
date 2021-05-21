@@ -1,0 +1,38 @@
+{
+    "$schema": "",
+    "data": [{
+            "name": "黔农宝·月月红",
+            "date": "4.50",
+            "tese1": "一次存入",
+            "tese2": "月月获息",
+            "tese3": "",
+            "FirstMoney": "10000元",
+            "url": "main.homeYYH"
+        }, {
+            "name": "黔农宝·福满多",
+            "date": "4.875",
+            "tese1": "利率上浮",
+            "tese2": "收益增利",
+            "tese3": "",
+            "FirstMoney": "50元",
+            "url": "main.homeFMD"
+        }, {
+            "name": "福满多2号",
+            "date": "4.875",
+            "tese1": "利率上浮",
+            "tese2": "收益增利",
+            "tese3": "",
+            "FirstMoney": "50元",
+            "url": "main.homeFMD_zx"
+        }, {
+            "name": "健康存",
+            "date": "4.875",
+            "tese1": "利率上浮",
+            "tese2": "收益增利",
+            "tese3": "",
+            "FirstMoney": "50元",
+            "url": "main.homeJKC"
+        }
+
+    ]
+}

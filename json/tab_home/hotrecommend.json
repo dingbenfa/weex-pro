@@ -1,0 +1,19 @@
+{
+    "$schema": "hot_recommend_schema.json",
+    "data": [{
+            "url": "main.bankout",
+            "src": "imgs/tab_home/hot/hot1.png",
+            "name": ""
+        },
+        {
+            "url": "",
+            "src": "imgs/tab_home/hot/hot2.png",
+            "name": ""
+        },
+        {
+            "url": "main.mobilepay",
+            "src": "imgs/tab_home/hot/hot3.png",
+            "name": ""
+        }
+    ]
+}

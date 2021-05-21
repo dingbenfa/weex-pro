@@ -1,0 +1,36 @@
+{
+    "$schema": "gold_topic_schema.json",
+    "data": {
+        "more": {
+            "title": "更多",
+            "url": "http://www.csii.com.cn",
+            "key":""
+        },
+        "bigImgList": [{
+            "name": "",
+            "url": "http://www.csii.com.cn",
+            "src": "imgs/tab_finance/gold/topicImg.png",
+            "key":"快速理财安全便捷"
+        }, {
+            "name": "",
+            "url": "http://www.csii.com.cn",
+            "src": "imgs/tab_finance/gold/topicImg2.png",
+            "key":"快速理财安全便捷"
+        }],
+        "newsList": [{
+            "url": "http://www.csii.com.cn",
+            "src": "imgs/tab_finance/gold/ad.png",
+            "title": "赌球危险！",
+            "short": "天台很挤，要给股民留位置,欢迎使用唐山银行理财",
+            "time": "1小时前",
+            "key":"赌球危险！天台很挤，要给股民留位置,欢迎使用唐山银行理财,tangshanyinhanglicai"
+        }, {
+            "url": "http://www.csii.com.cn",
+            "src": "imgs/tab_finance/gold/ad.png",
+            "title": "股市危险！",
+            "short": "天台很挤，要给球迷留位置,欢迎使用唐山银行活动",
+            "time": "1小时前",
+            "key":"股市危险！天台很挤，要给球迷留位置,tangshanyinhanghuodong"
+        }]
+    }
+}

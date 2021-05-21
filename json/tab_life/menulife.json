@@ -1,0 +1,26 @@
+{
+    "$schema": "menu_schema.json",
+    "data": {
+        "menuList": [
+            {
+                "url": "main.locationHome",
+                "src": "imgs/tab_life/menulife/wdcx.png",
+                "name": "网点预约"
+            },
+            {
+                "url": "main.QRdraw",
+                "src": "imgs/tab_life/menulife/yykh.png",
+                "name": "扫码取款"
+            }
+            
+        ],
+        "menuItem": {
+            "bgImg":"",
+            "columns": 2,
+            "imgWidth": 52,
+            "imgHeight": 52,
+            "fontSize": 24,
+            "fontColor": "rgba(102,102,102,0.9)"
+        }
+    }
+}

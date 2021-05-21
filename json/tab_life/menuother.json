@@ -1,0 +1,18 @@
+{
+    "$schema": "menu_schema.json",
+    "data": {
+        "menuList": [{
+                "url": "main.PLegalCost",
+                "src": "imgs/tab_life/menuother/court.png",
+                "name": "法院缴费"
+            },
+            {
+                "url": "main.NonTaxPay",
+                "src": "imgs/tab_life/menuother/non-tag.png",
+                "name": "非税缴费"
+            }
+        ],
+        "columns": 4,
+        "menu_title": "其他缴费"
+    }
+}

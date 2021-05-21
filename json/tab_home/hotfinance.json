@@ -1,0 +1,24 @@
+{
+    "$schema": "hot_finance_schema.json",
+    "data": {
+        "details": {
+            "title": "更多",
+            "url": "main.plnv"
+        },
+        "financeList": [{
+                "finance_type": "智富1815期35天 （GXZF1819219）",
+                "rate": 3.88,
+                "day": 35,
+                "amount": 5,
+                "saled_text": 0.72
+            },
+            {
+                "finance_type": "智富1815期35天 （GXZF1819219）",
+                "rate": 3.88,
+                "day": 35,
+                "amount": 5,
+                "saled_text": 0.92
+            }
+        ]
+    }
+}

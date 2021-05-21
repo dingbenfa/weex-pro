@@ -1,0 +1,36 @@
+{
+	"bgImg":[
+		{
+			"type":"",
+			"src":"./imgs/myCount/hqczBg.png"
+		},{
+			"type":"",
+			"src":"./imgs/myCount/dqczBg.png"
+		},{
+			"type":"",
+			"src":"./imgs/myCount/dzzhBg.png"
+		},{
+			"type":"",
+			"src":"./imgs/myCount/Firstzh.png"
+		}
+		
+	],
+	"sBgImg":[
+		{
+			"type":"",
+			"src":"./imgs/myCount/sHqczBg.png"
+		},{
+			"type":"",
+			"src":"./imgs/myCount/sDqczBg.png"
+		},{
+			"type":"",
+			"src":"./imgs/myCount/sDzzhBg.png"
+		},{
+			"type":"",
+			"src":"./imgs/myCount/sFirstzh.png"
+		}
+	],
+	"logoImg":[
+		
+	]
+}

@@ -1,0 +1,8 @@
+{
+    "$schema": "ad_schema.json",
+    "data": [{
+        "name": "",
+        "src": "./imgs/tab_home/ad/ad.png",
+        "url": "main.Loans"
+    }]
+}

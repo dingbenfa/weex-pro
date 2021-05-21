@@ -1,0 +1,54 @@
+{
+    "$schema": "img_menu_schema.json",
+    "data": {
+        "menuList": [{
+                "url": "main.TransferRemittance",
+                "src": "imgs/tab_home/menu/zzhk.png",
+                "name": "转账汇款"
+            },
+            {
+                "url": "main.myCountList",
+                "src": "imgs/tab_home/menu/zhgl.png",
+                "name": "账户管理"
+            },
+            {
+                "url": "main.depositHome",
+                "src": "imgs/tab_home/menu/cktz.png",
+                "name": "储蓄产品"
+            },
+            {
+                "url": "main.Tab_finance?isBack=true",
+                "src": "imgs/tab_home/menu/gwk.png",
+                "name": "投资理财"
+            },
+            {
+                "url": "main.Loans",
+                "src": "imgs/tab_home/menu/wddk.png",
+                "name": "贷款产品"
+            },
+            {
+                "url": "main.changeCard",
+                "name": "换卡申请",
+                "src": "imgs/changeCard/hksq.png"
+            },
+            {
+                "url": "main.changeCardQueryHome",
+                "name": "换卡查询",
+                "src": "imgs/tab_home/menu/icon_hkcx.png"
+            },
+            {
+                "url": "main.moreMenu",
+                "src": "imgs/tab_home/menu/qbgn.png",
+                "name": "全部功能"
+            }
+        ],
+        "menuItem": {
+            "bgImg": "",
+            "columns": 4,
+            "imgWidth": 52,
+            "imgHeight": 52,
+            "fontSize": 24,
+            "fontColor": "#404561"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "$schema": "img_menu_schema.json",
+    "data": {
+        "menuList": [{
+                "url": "main.newmain",
+                "src": "imgs/tab_home/menu1/ping@3x.png",
+                "name": "账户管理"
+            },
+            {
+                "url": "main.transferaccouts",
+                "src": "imgs/tab_home/menu1/deposit@3x.png",
+                "name": "转账汇款"
+            },
+            {
+                "url": "main.plnv",
+                "src": "imgs/tab_home/menu1/money@3x.png",
+                "name": "投资理财"
+            },
+            {
+                "url": "main.deposit",
+                "src": "imgs/tab_home/menu1/life@3x.png",
+                "name": "特色定活"
+            },
+            {
+                "url": "",
+                "src": "imgs/tab_home/menu1/safe@3x.png",
+                "name": "安全中心"
+            },
+            {
+                "url": "main.loan",
+                "src": "imgs/tab_home/menu1/key@3x.png",
+                "name": "贷款管理"
+            },
+            {
+                "url": "main.businesscard",
+                "src": "imgs/tab_home/menu1/cards@3x.png",
+                "name": "公务卡"
+            },
+            {
+                "url": "main.allmenu",
+                "src": "imgs/tab_home/menu1/more@3x.png",
+                "name": "更多"
+            }
+        ],
+        "bgImg":"imgs/tab_home/menu1/banner@3x.png",
+        "columns": 5,
+        "imgSize": {
+            "imgWidth": 60,
+            "imgHeight": 60
+        },
+        "fontSize": 24,
+        "fontColor": "#fff"
+    }
+}

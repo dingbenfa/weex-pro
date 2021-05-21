@@ -1,0 +1,28 @@
+{
+    "$schema": "ad_schema.json",
+    "data": {
+    	"menuList":[
+    		{
+    			"name":"阶梯收益率",
+    			"src":"./imgs/finance/lcimg4.png",
+    			"url":"",
+    			"context":"最高可达4.88%"
+    		},
+    		{
+    			"name":"随转随用",
+    			"src":"./imgs/finance/lcimg5.png",
+    			"url":"",
+    			"context":"资金使用更灵活"
+    		},
+    		{
+    			"name":"天天收益",
+    			"src":"./imgs/finance/lcimg6.png",
+    			"url":"",
+    			"context":"收益稳定放心用"
+    		}
+    	],
+        "menuItem": {
+            "columns": 3
+        }
+    }
+}

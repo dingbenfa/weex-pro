@@ -1,0 +1,15 @@
+{
+    "$schema": "ad_schema.json",
+    "data": [
+    	{
+            "name": "",
+            "src": "imgs/finance/ad/ad1.png",
+            "url": "main.czbHome"
+        },
+        {
+            "name": "",
+            "src": "imgs/finance/ad/ad1.png",
+            "url": ""
+        }
+    ]
+}

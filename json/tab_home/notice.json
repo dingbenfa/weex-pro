@@ -1,0 +1,18 @@
+{
+    "$schema": "notice_schema.json",
+    "data": [{
+            "title": "手机银行成功上线!",
+            "url": "http://www.hxb.com.cn",
+            "key":"手机银行成功上线,shoujiyinhangchenggongshangxian"
+        },
+        {
+            "title": "贵阳农商手机银行手机银行新版app上线了",
+            "url": "http://www.hxb.com.cn",
+            "key":"唐山银行POC正式启动,tangshanyinhangpoczhengshiqidong"
+        }, {
+            "title": "贵阳农商手机银行手机银行新版app上线了",
+            "url": "http://www.hxb.com.cn",
+            "key":"科蓝公司收购某数据库公司,kelangongsishougoumoushujukugongsi"
+        }
+    ]
+}

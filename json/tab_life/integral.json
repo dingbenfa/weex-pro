@@ -1,0 +1,31 @@
+{
+    "$schema": "integral_schema.json",
+    "data": {
+        "more": {
+            "title": "更多",
+            "url": ""
+        },
+        "singleImg": {
+            "name": "单图话题",
+            "url": "",
+            "src": "imgs/tab_life/integral/spring_img.png"
+        },
+        "websiteList": [{
+            "name": "滨州新旺角社区支行",
+            "url": "",
+            "src": "imgs/tab_life/integral/anchangzhihang.png"
+        }, {
+            "name": "城中支行",
+            "url": "",
+            "src": "imgs/tab_life/integral/anhuazhihang.png"
+        }, {
+            "name": "滨州新旺角社区支行",
+            "url": "",
+            "src": "imgs/tab_life/integral/beihaizhihang.png"
+        }, {
+            "name": "城中支行",
+            "url": "",
+            "src": "imgs/tab_life/integral/chengdongzhihang.png"
+        }]
+    }
+}

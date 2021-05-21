@@ -1,0 +1,31 @@
+{
+    "$schema": "img_menu_schema.json",
+    "data": {
+        "menuList": [{
+                "url": "main.newmain",
+                "src": "./imgs/tab_user/menu/ban@3x.png",
+                "name": "我的账户"
+            },
+            {
+                "url": "main.PInvPrdRee1",
+                "src": "./imgs/tab_user/menu/mydepositer@3x.png",
+                "name": "我的理财"
+            },
+            {
+                "url": "main.MySave",
+                "src": "./imgs/tab_user/menu/mydeposite@3x.png",
+                "name": "我的存款"
+            }
+
+        ],
+        "menuItem": {
+            "bgImg":"",
+            "rows":1,
+            "columns": 3,
+            "imgWidth": 50,
+            "imgHeight": 50,
+            "fontSize": 26,
+            "fontColor": "#404561"
+        }
+    }
+}

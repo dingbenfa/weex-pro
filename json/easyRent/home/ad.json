@@ -1,0 +1,19 @@
+{
+    "$schema": "ad_schema.json",
+    "data": [{
+            "name": "",
+            "src": "./imgs/tab_home/ad/ad_g.png",
+            "url": ""
+        },
+        {
+            "name": "存款保险",
+            "src": "imgs/deposit/ad/ckbxtl.png",
+            "url": "static/htmls/Agreements/DepositInsurance.html"
+        },
+        {
+            "name": "升级账号",
+            "src": "./imgs/tab_home/ad/sjzh_banner.jpg",
+            "url": "main.changeCardIntroduce"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "$schema": "ad_schema.json",
+    "data": [{
+        "name": "",
+        "src": "imgs/tab_life/ad/JF_banner.png",
+        "url": "http://www.csii.com.cn"
+    }]
+}

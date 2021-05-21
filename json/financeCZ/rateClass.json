@@ -1,0 +1,27 @@
+{
+	"data": {
+		"centerList": [
+			{
+				"StepTime": "1天",
+				"baseir": "1.48%",
+				"StepRate":"0.0148"
+			}, {
+				"StepTime": "7天",
+				"Jizhunll": "1.68%",
+				"StepRate":"0.0168"
+			}, {
+				"StepTime": "3个月",
+				"Jizhunll": "3.28%",
+				"StepRate":"0.0328"
+			}, {
+				"StepTime": "6个月",
+				"Jizhunll": "4.08%",
+				"StepRate":"0.0408"
+			}, {
+				"StepTime": "1年",
+				"Jizhunll": "4.48%",
+				"StepRate":"0.0448"
+			}
+		]
+	}
+}

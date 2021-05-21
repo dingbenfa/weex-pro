@@ -1,0 +1,24 @@
+{
+    "$schema": "deposit_finRecommend.json",
+    "data": {
+        "details": {
+            "title": "更多",
+            "url": "main.plnv"
+        },
+        "financeList": [{
+            "name": "黔农宝·月月红",
+            "rate": "4.5",
+            "isHot": true,
+            "tese1": "一次存入",
+            "tese2": "月月获息",
+            "url": "main.homeYYH"
+        }, {
+            "name": "黔农宝·福满多",
+            "rate": "4.875",
+            "isHot": "false",
+            "tese1": "利率上浮",
+            "tese2": "收益增利",
+            "url": "main.homeFMD"
+        }]
+    }
+}

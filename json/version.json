@@ -1,0 +1,17 @@
+{
+    "$schema": "version_schema.json",
+    "data": {
+        "ios": {
+            "appVersion": "3.0",
+            "appDesc": "您有新的版本请更新！",
+            "isStrong": "2",
+            "downloadUrl": "https://itunes.apple.com/cn/app/id1224581093"
+        },
+        "android": {
+            "appVersion": "3.0",
+            "appDesc": "您有新的版本请更新！",
+            "isStrong": "2",
+            "downloadUrl": "https://mbank.gynsh.com/resources/app/andriod/app-r/app-3.0.apk"
+        }
+    }
+}

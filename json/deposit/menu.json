@@ -1,0 +1,35 @@
+{
+    "$schema": "img_menu_schema.json",
+    "data": {
+        "menuList": [{
+                "url": "main.homeYYH",
+                "src": "imgs/deposit/menu/yyh.png",
+                "name": "黔农宝·月月红"
+            },
+            {
+                "url": "main.homeFMD",
+                "src": "imgs/deposit/menu/fmd.png",
+                "name": "黔农宝·福满多"
+            },
+            {
+                "url": "main.ptimToSav",
+                "src": "imgs/deposit/menu/dhhz.png",
+                "name": "定活互转"
+            },
+            {
+                "url": "main.PInvTrsQry",
+                "src": "imgs/deposit/menu/tzck.png",
+                "name": "通知存款"
+            }
+        ],
+        "menuItem": {
+            "bgImg": "",
+            "rows": 1,
+            "columns": 4,
+            "imgWidth": 50,
+            "imgHeight": 50,
+            "fontSize": 26,
+            "fontColor": "#404561"
+        }
+    }
+}

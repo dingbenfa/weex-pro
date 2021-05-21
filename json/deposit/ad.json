@@ -1,0 +1,14 @@
+{
+    "$schema": "ad_schema.json",
+    "data": [{
+            "name": "",
+            "src": "imgs/deposit/ad/CK_banner.png",
+            "url": "main.homeFMD"
+        },
+        {
+            "name": "存款保险条列",
+            "src": "imgs/deposit/ad/ckbxtl.png",
+            "url": "static/htmls/Agreements/DepositInsurance.html"
+        }
+    ]
+}

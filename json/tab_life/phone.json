@@ -1,0 +1,54 @@
+{
+  "$schema": "ad_schema.json",
+  "data": {
+    "menuList": [
+      {
+        "name": "缴燃气费",
+        "type":"C",
+        "src": "./imgs/tab_life/topUp/jrqf.png",
+        "url": "main.waterEleFirePay",
+        "context": "可享受9.8折优惠"
+      },
+      {
+        "name": "缴水费",
+        "type":"W",
+        "src": "./imgs/tab_life/topUp/water.png",
+        "url": "main.waterEleFirePay",
+        "context": "可享受9.8折优惠"
+      },
+      {
+        "name": "缴电费",
+        "type":"E",
+        "src": "./imgs/tab_life/topUp/jdf.png",
+        "url": "main.waterEleFirePay",
+        "context": "可享受9.8折优惠"
+      },
+      {
+        "name": "缴学费",
+        "type":"4",
+        "src": "./imgs/tab_life/topUp/jxf.png",
+        "url": "main.studyPayment",
+        "context": "可享受9.8折优惠"
+      },
+      {
+        "url": "main.waterEleFirePay",
+        "type":"T",
+        "name": "有线电视费",
+        "src": "./imgs/tab_life/topUp/yxdsf.png",
+        "context": ""
+      },
+      {
+        "url": "main.propertyPayment",
+        "type":"7",
+        "name": "综合物管费",
+        "src": "./imgs/tab_life/topUp/zhwgf.png"
+      }
+      
+    ],
+    "menuItem": {
+      "columns": 3,
+      "imgWidth": 52,
+      "imgHeight": 52
+    }
+  }
+}

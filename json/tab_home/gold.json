@@ -1,0 +1,14 @@
+{
+    "$schema": "gold_schema.json",
+    "data": [{
+            "url": "main.SavingsDCG",
+            "src": "imgs/tab_home/gold/gold1.png",
+            "name": ""
+        },
+        {
+            "url": "main.deposit",
+            "src": "imgs/tab_home/gold/gold2.png",
+            "name": ""
+        }
+    ]
+}

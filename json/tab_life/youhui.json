@@ -1,0 +1,24 @@
+{
+	"data":{
+		"ItemList":[
+			{
+				"src":"./imgs/tab_life/youhui/mxhk.png",
+				"name":"免息还款",
+				"context":"有惊喜积分兑大奖",
+				"url":""
+			},
+			{
+				"src":"./imgs/tab_life/youhui/sjcz.png",
+				"name":"手机充值",
+				"context":"享受9.8折优惠",
+				"url":""
+			},
+			{
+				"src":"./imgs/tab_life/youhui/rqjf.png",
+				"name":"燃气缴费",
+				"context":"月月帛红包",
+				"url":""
+			}
+		]
+	}
+}

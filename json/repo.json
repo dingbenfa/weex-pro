@@ -1,0 +1,1899 @@
+{
+    "url": "./",
+    "stages": {
+        "welcome": {
+            "name": "启动页面",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=welcome",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-funcName": "闪屏",
+                "x-funcType": "5"
+            },
+            "preferences": {},
+            "icon": "",
+            "auth_check": []
+        },
+        "splashscreen": {
+            "name": "闪屏",
+            "module": "weex",
+            "path": "./splashscreen/index.weex.js",
+            "params": {
+                "duration": "5",
+                "x-fullscreen": "yes",
+                "x-funcName": "闪屏",
+                "x-funcType": "5"
+            },
+            "preferences": {},
+            "icon": "",
+            "auth_check": []
+        },
+        "TransferRemittance": {
+            "name": "转账汇款首页",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=recentPayee",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "PInvTrsQry": {
+            "name": "通知存款",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PNoticeSavPay",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "PNoticeSavPayList": {
+            "name": "通知存款产品",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PNoticeSavPayList",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "pmtransferInOrOut": {
+            "name": "快速转账",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PMTransferInOrOut",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "utilSpectacle": {
+            "name": "透明场景",
+            "module": "weex",
+            "path": "./utilSpectacle/index.weex.js",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-pluginmodule": "full"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "utilTransparent": {
+            "name": "透明场景2",
+            "module": "weex",
+            "path": "./utilTransparent/index.weex.js",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-pluginmodule": "transparent"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "pactTrs": {
+            "name": "明细查询",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PActTrs",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "ptimToSav": {
+            "name": "定活互转",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PTimToSav",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "PTimToSavList": {
+            "name": "定期产品",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PTimToSavList",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "payeeAddress": {
+            "name": "收款人名册管理",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PPayeeManage",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "pmobileTransfer": {
+            "name": "手机号转账",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PMobileTransfer",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "ptrsRecordQry": {
+            "name": "转账记录查询",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PTrsRecordQry",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "PActLostOne": {
+            "name": "账户挂失1",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PActLostOne",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "PActLost": {
+            "name": "账户挂失",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PActLost",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "PRabotAct1": {
+            "name": "账户解挂",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PRabotAct1",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "PRabotAct": {
+            "name": "账户加挂",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PRabotAct",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "launcher": {
+            "name": "launcher",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=Launcher",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "auth_check": []
+        },
+        "login": {
+            "name": "登录",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=Login",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-secure": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "msgCenter": {
+            "name": "消息中心",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=msgCenter",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "msgList": {
+            "name": "消息中心",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=msgList",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "Equipment": {
+            "name": "设备绑定",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=Equipment",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "fingerLogin": {
+            "name": "指纹登录",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=fingerLogin",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-pluginmodule": "transparent"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "ChangePwd": {
+            "name": "修改密码",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=ChangePwd",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "SecurityCenter": {
+            "name": "安全中心",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=SecurityCenter",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "depositHome": {
+            "name": "存款首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=depositHome",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myXLD": {
+            "name": "我的享利多",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myXLD",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "forgetPassword": {
+            "name": "忘记密码",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=forgetPassword",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "register": {
+            "name": "注册",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=RegisterFirst",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "financeZM": {
+            "name": "超值天添赢",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=financeZM",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "QRdraw": {
+            "name": "二维码取款",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=QRdraw",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "financeHome": {
+            "name": "理财首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=financeHome",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "czbHome": {
+            "name": "超值宝活期",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=czbHome",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "financeInfo": {
+            "name": "理财产品展示页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=financeInfo",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "myFinance": {
+            "name": "我的理财",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myFinance",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "detailsInfo": {
+            "name": "我的理财详情以成立",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=detailsInfo",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "detailsInfoD": {
+            "name": "我的理财详情待成立",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=detailsInfoD",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "riskRating": {
+            "name": "风险测评",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=riskRating",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "myRiskAssessment": {
+            "name": "我的风险测评",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myRiskAssessment",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "financeCYC": {
+            "name": "诚意存",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=financeCYC",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "myCYC": {
+            "name": "我的诚意存",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myCYC",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "homeCXC": {
+            "name": "超享存首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=homeCXC",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "myCXC": {
+            "name": "我的超享存",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myCXC",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "homeJJG": {
+            "name": "黔农宝·节节高首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=homeJJG",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myJJG": {
+            "name": "我的黔农宝·节节高",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myJJG",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "homeYYH": {
+            "name": "黔农宝·月月红",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=homeYYH",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myYYH": {
+            "name": "我的黔农宝·月月红",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myYYH",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "homeFMD": {
+            "name": "福满多",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=homeFMD",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myFMD": {
+            "name": "我的福满多",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myFMD",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "myCountList": {
+            "name": "我的账户",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myCountList",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "eleReturnDetails": {
+            "name": "电子回单",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=eleReturnDetails",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "eleReturnDetails1": {
+            "name": "电子回单",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=eleReturnDetails1",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "eleReturnProductDetails": {
+            "name": "电子回单(储蓄购买)",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=eleReturnProductDetails",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "moneyIn": {
+            "name": "资金转入",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=moneyIn",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "moneyInSign": {
+            "name": "支付签约",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=moneyInSign",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "moneyOut": {
+            "name": "资金转出",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=moneyOut",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "aliasSetting": {
+            "name": "别名设置",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=aliasSetting",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myBoundCard": {
+            "name": "我的绑定卡",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myBoundCard",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "phoneNumber": {
+            "name": "手机号管理",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=phoneNumber",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "transferMM": {
+            "name": "密码管理",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=transferMM",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "otherCardGetMoney": {
+            "name": "他行卡收款",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=otherCardGetMoney",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "otherCardSign": {
+            "name": "他行卡签约",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=otherCardSign",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "locationHome": {
+            "name": "网点预约首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=locationHome",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "appointQYOpenCount": {
+            "name": "企业预约开户",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=appointQYOpenCount",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "appointQYOpenCountQuery": {
+            "name": "企业预约开户查询",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=appointQYOpenCountQuery",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "appointDEDraw": {
+            "name": "大额取款预约",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=appointDEDraw",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "appointDEDrawQry": {
+            "name": "大额取款预约查询",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=appointDEDrawQry",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "appoinGetNumber": {
+            "name": "预约取号",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=appoinGetNumber",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "locationOppoin": {
+            "name": "预约取号查询",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=locationOppoin",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "locationList": {
+            "name": "网点列表",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=locationList",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myProperty": {
+            "name": "我的资产",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myProperty",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "myLoan": {
+            "name": "我的贷款",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myLoan",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "Loans": {
+            "name": "贷款首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=Loans",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "LoanDetail": {
+            "name": "超e贷首页(没有额度)",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=LoanDetail",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "myQuota": {
+            "name": "我的额度",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myQuota",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "quotaApplication": {
+            "name": "额度申请",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=quotaApplication",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "otherCardPaySign": {
+            "name": "他行卡支付签约",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=otherCardPaySign",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "otherCardMain": {
+            "name": "资金归集首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=otherCardMain",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "addFundCollection": {
+            "name": "添加资金归集",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=addFundCollection",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "openCount": {
+            "name": "登录手机银行后开启二类户",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=openCountFirst",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "helpCenter": {
+            "name": "帮助中心",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=helpCenterFirst",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "aboutMe": {
+            "name": "关于",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=aboutMe",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "limitSetting": {
+            "name": "限额设置",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=limitSetting",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "QrcodeLogin": {
+            "name": "二维码登录",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=QrcodeLogin",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "waterPayment": {
+            "name": "缴水费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=waterPayment",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "studyPayment": {
+            "name": "缴学费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=studyPayment",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "propertyPayment": {
+            "name": "综合物管费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=propertyPayment",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "phonePayment": {
+            "name": "电话费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=phonePayment",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "lookCertificate": {
+            "name": "凭证查看",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=lookCertificate",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "moreMenu": {
+            "name": "更多菜单",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=moreMenu",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "PayPwd": {
+            "name": "支付密码",
+            "module": "weex",
+            "path": "./payPwd/index.weex.js",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-pluginmodule": "full"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "addReferralInfo": {
+            "name": "添加客户经理",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=addReferralInfo",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-pluginmodule": "full"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "referralInfoResult": {
+            "name": "客户经理信息",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=referralInfoResult",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "webView": {
+            "name": "网页加载器",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=webView",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "kuaidai": {
+            "name": "超值快贷",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=kuaidai",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "limitApplication": {
+            "name": "超值快贷额度申请",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=limitApplication",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "meQuota": {
+            "name": "超值快贷我的额度",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=meQuota",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "zhiWen": {
+            "name": "指纹/面容密码",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=zhiWen",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "SetGersture": {
+            "name": "手势登录",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=SetGersture",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "wodyuy": {
+            "name": "我的预约",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=wodyuy",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "Tab_finance": {
+            "name": "投资理财",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=Tab_finance",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myId": {
+            "name": "投资理财",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myId",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "paymentRecord": {
+            "name": "缴费记录查询",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=paymentRecord",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "pmtransferInOrOutNew": {
+            "name": "快速转账",
+            "module": "web",
+            "path": "./vx-gynsyh/index.html?Page=PMTransferInOrOutNew",
+            "params": {
+                "x-funcType": "1",
+                "x-backGestures": "yes",
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "waterEleFirePay": {
+            "name": "缴燃气费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=waterEleFirePay",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "wefPayConfim": {
+            "name": "缴费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=wefPayConfim",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "paymentResult": {
+            "name": "缴费结果页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=paymentResult",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "alwaysPay": {
+            "name": "常用缴费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=alwaysPay",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "mycztty": {
+            "name": "超值天天盈",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=mycztty",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "myFSC": {
+            "name": "超值福寿存",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myFSC",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "homeXLD": {
+            "name": "享利多",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=homeXLD",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myRYC": {
+            "name": "如意存",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myRYC",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "Tab_life": {
+            "name": "生活首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=Tab_life",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "studyPaymentDetail": {
+            "name": "缴学费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=studyPaymentDetail",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "payBill": {
+            "name": "缴学费待缴账单",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=payBill",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "payBillXQ": {
+            "name": "缴学费待缴账单详情",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=payBillXQ",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "historyBill": {
+            "name": "缴学费历史账单",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=historyBill",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "historyBillXQ": {
+            "name": "缴学费历史账单详情",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=historyBillXQ",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "PropertyManagement": {
+            "name": "缴综合物管费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=PropertyManagement",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "LShistoryBill": {
+            "name": "缴综合物管费缴费",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=LShistoryBill",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "AmountBepaid": {
+            "name": "缴综合物管费历史",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=AmountBepaid",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "financeRedemption": {
+            "name": "周期理财产品赎回",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=financeRedemption",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myXLD1": {
+            "name": "我的享利多（互联网核心）",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myXLD1",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myWfc": {
+            "name": "我的五福存",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myWfc",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "paymentRecordList": {
+            "name": "缴费记录查询",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=paymentRecordList",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "yijianbangka": {
+            "name": "一键绑卡",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=yijianbangka",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "utilProtocol1": {
+            "name": "协议加载器",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=utilProtocol1",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "utilProtocol11": {
+            "name": "协议1",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=utilProtocol1",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "utilProtocol2": {
+            "name": "协议2",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=utilProtocol2",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "utilProtocol": {
+            "name": "协议",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=utilProtocol",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "chaozhidai": {
+            "name": "超置贷首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=chaozhidai",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "shouShi": {
+            "name": "手势",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=shouShi",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "changeCardQueryHome": {
+            "name": "换卡查询首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=changeCardQueryHome",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "eLoanTips": {
+            "name": "超e贷产品小贴士",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=eLoanTips",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "homeFMD_zx": {
+            "name": "超e贷产品小贴士",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=homeFMD_zx",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "AmountBepaidXQ": {
+            "name": "综合物管费代缴详情",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=AmountBepaidXQ",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "changeCard": {
+            "name": "换卡申请首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=changeCard",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "cardMailMsg": {
+            "name": "换卡申请邮寄信息页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=cardMailMsg",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "eleCardApply": {
+            "name": "电子卡申请",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=eleCardApply",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "bankCardActivate": {
+            "name": "卡片激活",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=bankCardActivate",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "cardApplyRuslut": {
+            "name": "换卡申请结果",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=cardApplyRuslut",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "firstLoginAddPsw": {
+            "name": "黔龙云首次登录修改密码",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=firstLoginAddPsw",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "cecHome": {
+            "name": "超e存首页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=cecHome",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "cecBindAccList": {
+            "name": "超e存绑定卡列表",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=cecBindAccList",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "changeCardIntroduce": {
+            "name": "换卡申请介绍页",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=changeCardIntroduce",
+            "params": {
+                "x-fullscreen": "yes",
+                "x-backGestures": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "homeJKC": {
+            "name": "健康存",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=homeJKC",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": []
+        },
+        "myJKC": {
+            "name": "我的健康存",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=myJKC",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "mobileTransferSign": {
+            "name": "手机号转账签约",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=mobileTransferSign",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        },
+        "mobileTransferSignChangeFirst": {
+            "name": "手机号转账签约变更",
+            "module": "weex",
+            "path": "./weex/index.weex.js?Page=mobileTransferSignChangeFirst",
+            "params": {
+                "x-fullscreen": "yes"
+            },
+            "preferences": {},
+            "icon": "icon.png",
+            "auth_check": [
+                "sub != '' | login?text=请先登录"
+            ]
+        }
+    },
+    "resource_rules": {
+        "alg": "aes256cfb",
+        "key": "Q1NJSSBrZXkgZXhhbXBsZQ==",
+        "fnkey": "csii-fn-key",
+        "repo_includes": [],
+        "repo_excludes": [
+            "^repo.json$",
+            "^repo.dat$",
+            "\.DS_Store$",
+            "\.go$",
+            "^\.svn",
+            "^\.git",
+            "^config/"
+        ],
+        "cache_includes": [],
+        "cache_excludes": [
+            "\.do$",
+            "\.do\\?"
+        ],
+        "cache_ttl": 72,
+        "prefetch_includes": [],
+        "prefetch_excludes": [],
+        "prefetch_interval": 5
+    }
+}

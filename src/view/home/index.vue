@@ -46,12 +46,13 @@
       :right="returnDialogType().rightBtn"
     ></dialog>
 
-    <rent-selection :show="rentSelectShow" @handleClearSelect="handleClearSelect" @emitParams="handleQueryParam"></rent-selection>
-
     <loading class="loading" @loading="onloading" :display="loadinging ? 'show' : 'hide'">
       <text class="indicator-text">加载中 ...</text>
       <loading-indicator class="indicator"></loading-indicator>
     </loading>
+
+    <!-- 房源筛选 -->
+    <rent-selection :show="rentSelectShow" @handleClearSelect="handleClearSelect" @emitParams="handleQueryParam"></rent-selection>
   </list> 
 
       <!-- <list> -->

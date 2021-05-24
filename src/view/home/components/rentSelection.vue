@@ -1,6 +1,6 @@
 <template>
     <div class="bf-page-container">
-        <wxc-popup popup-color="#ffffff"
+        <wxc-popup ref="wxcPopup" popup-color="#ffffff"
             :show="show"
             @wxcPopupOverlayClicked="popupRentSelectHide"
             pos="right">
@@ -153,6 +153,9 @@ export default {
         // 确定筛选
         handleSelect() {
             this.$emit("emitParams", { param: 999});
+        },
+        handlePupopClose() {
+            this.$refs.wxcPopup.hide();
         },
     }
 }

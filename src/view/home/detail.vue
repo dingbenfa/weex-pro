@@ -42,7 +42,7 @@
                 <div class="bf-service-container">
                     <image src="/src/imgs/easyRent/home/person.png" style="width:32px;height:32px"></image>
                     <text class="bf-service-title">您的任何疑问，客服将耐心解答</text>
-                    <div class="bf-service-btn">
+                    <div class="bf-service-btn" @click="handleServiceTel">
                         <text class="bf-font-blue">客服电话</text>
                     </div>
                 </div>
@@ -82,23 +82,161 @@
         <div class="bf-fixed-bottom">
             <custom-btn title="下单" @sureClick="handleToOrder"></custom-btn>
         </div>
+        
+        <!-- 设施更多 -->
+        <ert-popup title="房屋设施" :height="720" :pupopShow="moreDeviceshow" @handlePupopClose="devicePupopClose">
+            <div class="bf-flex-row" style="padding-top:30px;">
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">床</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">浴缸</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">电话</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">空调</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">热水器</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">床</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">浴缸</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">电话</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">空调</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">热水器</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">床</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">浴缸</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">电话</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">空调</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">热水器</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">床</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">浴缸</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">电话</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">空调</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">热水器</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">床</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">浴缸</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">电话</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">空调</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">热水器</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">热水器</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">空调</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">空调</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">空调</text>
+                </div>
+                <div class="bf-device-box">
+                    <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
+                    <text class="bf-font-grey">空调</text>
+                </div>
+            </div>            
+        </ert-popup>
+
+        <!-- 客服电话 -->
+        <ert-popup title="客服电话" :height="500" :pupopShow="serviceshow" @handlePupopClose="servicePupopClose">
+            <div class="bf-flex-row" style="padding-top:30px;">
+                <text>客服电话</text>
+            </div>            
+        </ert-popup>
     </scroller>
 </template>
 
 <script>
 import ListHearder from "@/components/listHeader/index";
 import CustomBtn from "@/components/customBtn/index";
+import ertPopup from "@/components/ertPopup/index";
+
 
 export default {
     name: "RentHomeDetail",
     data() {
         return {
             isCollection: false,
+            moreDeviceshow: false,
+            serviceshow: false,
         }
     },
     components: {
         ListHearder,
-        CustomBtn
+        CustomBtn,
+        ertPopup
     },
     methods: {
         // 下单
@@ -111,8 +249,27 @@ export default {
         },
         // 房屋设施更多
         handleMoreDevice() {
-            
+            this.moreDeviceshow = true
         },
+        // 延迟关闭房屋设施更多pupop
+        devicePupopClose() {
+            let that = this;
+            setTimeout(function(){
+                that.moreDeviceshow = false
+            },500)
+        },
+        // 客服电话
+        handleServiceTel() {
+            this.serviceshow = true
+        },
+        // 延迟关闭客服电话pupop
+        servicePupopClose() {
+            let that = this;
+            setTimeout(function(){
+                that.serviceshow = false
+            },500)
+        },
+        
     }
 }
 
@@ -254,17 +411,18 @@ export default {
 
 .bf-flex-row{
     flex-direction:row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
     padding-left:30px;
     padding-right:30px;
     padding-bottom:15px;
-    padding-bottom:30px;
 }
 
 .bf-device-box{
-    width:138px;
+    width:137px;
     justify-content: center;
     align-items: center;
+    padding-bottom:30px;
 }
 
 .bf-map-container{

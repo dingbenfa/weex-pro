@@ -1968,7 +1968,7 @@ module.exports = __vue_exports__
 var _require = __webpack_require__(19),
     router = _require.router;
 
-var App = __webpack_require__(298);
+var App = __webpack_require__(302);
 /* eslint-disable no-new */
 new Vue(Vue.util.extend({ el: '#root', router: router }, App));
 router.push('/');
@@ -1997,7 +1997,7 @@ var _detail = __webpack_require__(286);
 
 var _detail2 = _interopRequireDefault(_detail);
 
-var _index3 = __webpack_require__(294);
+var _index3 = __webpack_require__(298);
 
 var _index4 = _interopRequireDefault(_index3);
 
@@ -5349,6 +5349,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import { MpSlider } from "madp-ui";
 
 var modal = weex.requireModule('modal'); //
+//
 //
 //
 //
@@ -24938,6 +24939,9 @@ exports.default = {
         // 确定筛选
         handleSelect: function handleSelect() {
             this.$emit("emitParams", { param: 999 });
+        },
+        handlePupopClose: function handlePupopClose() {
+            this.$refs.wxcPopup.hide();
         }
     }
 };
@@ -25122,6 +25126,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: ["bf-page-container"]
   }, [_c('wxc-popup', {
+    ref: "wxcPopup",
     attrs: {
       "popupColor": "#ffffff",
       "show": _vm.show,
@@ -25353,14 +25358,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "confirm": _vm.confirm,
       "cancel": _vm.cancel
     }
-  }), _c('rent-selection', {
-    attrs: {
-      "show": _vm.rentSelectShow
-    },
-    on: {
-      "handleClearSelect": _vm.handleClearSelect,
-      "emitParams": _vm.handleQueryParam
-    }
   }), _c('loading', {
     staticClass: ["loading"],
     attrs: {
@@ -25373,7 +25370,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: ["indicator-text"]
   }, [_vm._v("加载中 ...")]), _c('loading-indicator', {
     staticClass: ["indicator"]
-  })])], 1)
+  })]), _c('rent-selection', {
+    attrs: {
+      "show": _vm.rentSelectShow
+    },
+    on: {
+      "handleClearSelect": _vm.handleClearSelect,
+      "emitParams": _vm.handleQueryParam
+    }
+  })], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["bf-menu-card"]
@@ -25410,7 +25415,7 @@ __vue_styles__.push(__webpack_require__(287)
 __vue_exports__ = __webpack_require__(288)
 
 /* template */
-var __vue_template__ = __webpack_require__(293)
+var __vue_template__ = __webpack_require__(297)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -25560,15 +25565,16 @@ module.exports = {
   },
   "bf-flex-row": {
     "flexDirection": "row",
-    "justifyContent": "space-around",
+    "flexWrap": "wrap",
     "paddingLeft": "30",
     "paddingRight": "30",
-    "paddingBottom": "30"
+    "paddingBottom": "15"
   },
   "bf-device-box": {
-    "width": "138",
+    "width": "137",
     "justifyContent": "center",
-    "alignItems": "center"
+    "alignItems": "center",
+    "paddingBottom": "30"
   },
   "bf-map-container": {
     "width": "690",
@@ -25602,107 +25608,26 @@ var _index3 = __webpack_require__(289);
 
 var _index4 = _interopRequireDefault(_index3);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _index5 = __webpack_require__(293);
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+var _index6 = _interopRequireDefault(_index5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
     name: "RentHomeDetail",
     data: function data() {
         return {
-            isCollection: false
+            isCollection: false,
+            moreDeviceshow: false,
+            serviceshow: false
         };
     },
 
     components: {
         ListHearder: _index2.default,
-        CustomBtn: _index4.default
+        CustomBtn: _index4.default,
+        ertPopup: _index6.default
     },
     methods: {
         // 下单
@@ -25714,9 +25639,251 @@ exports.default = {
         },
 
         // 房屋设施更多
-        handleMoreDevice: function handleMoreDevice() {}
+        handleMoreDevice: function handleMoreDevice() {
+            this.moreDeviceshow = true;
+        },
+
+        // 延迟关闭房屋设施更多pupop
+        devicePupopClose: function devicePupopClose() {
+            var that = this;
+            setTimeout(function () {
+                that.moreDeviceshow = false;
+            }, 500);
+        },
+
+        // 客服电话
+        handleServiceTel: function handleServiceTel() {
+            this.serviceshow = true;
+        },
+
+        // 延迟关闭客服电话pupop
+        servicePupopClose: function servicePupopClose() {
+            var that = this;
+            setTimeout(function () {
+                that.serviceshow = false;
+            }, 500);
+        }
     }
-};
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 /* 289 */
@@ -25850,6 +26017,216 @@ module.exports.render._withStripped = true
 
 /***/ }),
 /* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(294)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(295)
+
+/* template */
+var __vue_template__ = __webpack_require__(296)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "E:\\test-project\\awesome-prject\\src\\components\\ertPopup\\index.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-dd39bfaa"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 294 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "bf-popup-container": {
+    "backgroundColor": "#ffffff",
+    "borderTopLeftRadius": "32",
+    "borderTopRightRadius": "32",
+    "flex": 1
+  },
+  "bf-popup-header": {
+    "flexDirection": "row",
+    "justifyContent": "space-between",
+    "alignItems": "center",
+    "height": "120",
+    "paddingLeft": "30",
+    "paddingRight": "30",
+    "borderStyle": "solid",
+    "borderBottomWidth": "1",
+    "borderBottomColor": "#F2F2F2",
+    "position": "relative"
+  },
+  "popup-header-title": {
+    "height": "120",
+    "width": "690",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "popup-header-text": {
+    "fontSize": "32",
+    "fontWeight": "bold",
+    "color": "#333333"
+  },
+  "popup-header-close": {
+    "height": "120",
+    "width": "120",
+    "justifyContent": "center",
+    "alignItems": "flex-end",
+    "position": "absolute",
+    "top": 0,
+    "right": 0,
+    "paddingRight": "30"
+  }
+}
+
+/***/ }),
+/* 295 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _weexUi = __webpack_require__(3);
+
+exports.default = {
+    name: 'Popup',
+    props: {
+        title: {
+            type: String,
+            default: ""
+        },
+        pupopShow: {
+            type: Boolean,
+            default: false
+        },
+        height: {
+            type: Number,
+            default: 840
+        }
+    },
+    components: {
+        WxcPopup: _weexUi.WxcPopup
+    },
+    methods: {
+        wxcPopupOverlayClicked: function wxcPopupOverlayClicked() {
+            this.$emit("popupOverlayClicked");
+        },
+        handlePupopClose: function handlePupopClose() {
+            this.$emit("handlePupopClose");
+            this.$refs.wxcPopup.hide();
+        }
+    }
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 296 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('wxc-popup', {
+    ref: "wxcPopup",
+    attrs: {
+      "popupColor": "rgba(0, 0, 0, 0.01)",
+      "show": _vm.pupopShow,
+      "height": _vm.height,
+      "pos": "bottom"
+    },
+    on: {
+      "wxcPopupOverlayClicked": _vm.wxcPopupOverlayClicked
+    }
+  }, [_c('div', {
+    staticClass: ["bf-popup-container"]
+  }, [_c('div', {
+    staticClass: ["bf-popup-header"]
+  }, [_c('div', {
+    staticClass: ["popup-header-title"]
+  }, [_c('text', {
+    staticClass: ["popup-header-text"]
+  }, [_vm._v(_vm._s(_vm.title))])]), _c('div', {
+    staticClass: ["popup-header-close"],
+    on: {
+      "click": _vm.handlePupopClose
+    }
+  }, [_c('image', {
+    staticStyle: {
+      width: "48px",
+      height: "48px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/close-icon.png"
+    }
+  })])]), _c('list', [_c('cell', {
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_vm._t("default")], 2)])])])], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 297 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -25884,13 +26261,32 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _c('text', {
     staticClass: ["rent-love-text"]
-  }, [_vm._v("收藏")])])]), _vm._m(1), _vm._m(2), _vm._m(3)]), _c('list-hearder', {
+  }, [_vm._v("收藏")])])]), _vm._m(1), _vm._m(2), _c('div', {
+    staticClass: ["bf-service-container"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "32px",
+      height: "32px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/person.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-service-title"]
+  }, [_vm._v("您的任何疑问，客服将耐心解答")]), _c('div', {
+    staticClass: ["bf-service-btn"],
+    on: {
+      "click": _vm.handleServiceTel
+    }
+  }, [_c('text', {
+    staticClass: ["bf-font-blue"]
+  }, [_vm._v("客服电话")])])])]), _c('list-hearder', {
     attrs: {
       "title": "房屋设施"
     }
   }), _c('div', {
     staticClass: ["bf-flex-row"]
-  }, [_vm._m(4), _vm._m(5), _vm._m(6), _vm._m(7), _c('div', {
+  }, [_vm._m(3), _vm._m(4), _vm._m(5), _vm._m(6), _c('div', {
     staticClass: ["bf-device-box"],
     on: {
       "click": _vm.handleMoreDevice
@@ -25909,7 +26305,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "title": "地理位置"
     }
-  }), _vm._m(8)], 1), _c('div', {
+  }), _vm._m(7)], 1), _c('div', {
     staticClass: ["bf-fixed-bottom"]
   }, [_c('custom-btn', {
     attrs: {
@@ -25918,7 +26314,395 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "sureClick": _vm.handleToOrder
     }
-  })], 1)])
+  })], 1), _c('ert-popup', {
+    attrs: {
+      "title": "房屋设施",
+      "height": 720,
+      "pupopShow": _vm.moreDeviceshow
+    },
+    on: {
+      "handlePupopClose": _vm.devicePupopClose
+    }
+  }, [_c('div', {
+    staticClass: ["bf-flex-row"],
+    staticStyle: {
+      paddingTop: "30px"
+    }
+  }, [_c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("床")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("浴缸")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("电话")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("空调")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("热水器")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("床")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("浴缸")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("电话")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("空调")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("热水器")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("床")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("浴缸")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("电话")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("空调")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("热水器")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("床")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("浴缸")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("电话")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("空调")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("热水器")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("床")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("浴缸")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("电话")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("空调")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("热水器")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("热水器")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("空调")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("空调")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("空调")])]), _c('div', {
+    staticClass: ["bf-device-box"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "64px",
+      height: "64px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/device-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["bf-font-grey"]
+  }, [_vm._v("空调")])])])]), _c('ert-popup', {
+    attrs: {
+      "title": "客服电话",
+      "height": 500,
+      "pupopShow": _vm.serviceshow
+    },
+    on: {
+      "handlePupopClose": _vm.servicePupopClose
+    }
+  }, [_c('div', {
+    staticClass: ["bf-flex-row"],
+    staticStyle: {
+      paddingTop: "30px"
+    }
+  }, [_c('text', [_vm._v("客服电话")])])])], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["rent-header-left"]
@@ -25963,24 +26747,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("水电费缴费模式：以实际生产为准")]), _c('text', {
     staticClass: ["bf-info-text"]
   }, [_vm._v("房屋运营公司：趣租有限公司")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["bf-service-container"]
-  }, [_c('image', {
-    staticStyle: {
-      width: "32px",
-      height: "32px"
-    },
-    attrs: {
-      "src": "/src/imgs/easyRent/home/person.png"
-    }
-  }), _c('text', {
-    staticClass: ["bf-service-title"]
-  }, [_vm._v("您的任何疑问，客服将耐心解答")]), _c('div', {
-    staticClass: ["bf-service-btn"]
-  }, [_c('text', {
-    staticClass: ["bf-font-blue"]
-  }, [_vm._v("客服电话")])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["bf-device-box"]
@@ -26053,21 +26819,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 294 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(295)
+__vue_styles__.push(__webpack_require__(299)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(296)
+__vue_exports__ = __webpack_require__(300)
 
 /* template */
-var __vue_template__ = __webpack_require__(297)
+var __vue_template__ = __webpack_require__(301)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -26097,13 +26863,13 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 295 */
+/* 299 */
 /***/ (function(module, exports) {
 
 module.exports = {}
 
 /***/ }),
-/* 296 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26146,7 +26912,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 297 */
+/* 301 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -26170,21 +26936,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 298 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(299)
+__vue_styles__.push(__webpack_require__(303)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(300)
+__vue_exports__ = __webpack_require__(304)
 
 /* template */
-var __vue_template__ = __webpack_require__(301)
+var __vue_template__ = __webpack_require__(305)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -26214,7 +26980,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 299 */
+/* 303 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -26243,7 +27009,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 300 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26271,7 +27037,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 301 */
+/* 305 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

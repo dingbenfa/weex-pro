@@ -23785,6 +23785,7 @@ exports.default = {
 //
 //
 //
+//
 
 /***/ }),
 /* 259 */
@@ -24595,6 +24596,7 @@ module.exports = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
 //
 //
 //
@@ -25586,6 +25588,72 @@ module.exports = {
     "left": 0,
     "right": 0,
     "backgroundColor": "#ffffff"
+  },
+  "bf-service-box": {
+    "flexDirection": "row",
+    "paddingLeft": "30",
+    "borderBottomWidth": "1",
+    "borderBottomColor": "#EBEDF0",
+    "height": "190",
+    "alignItems": "center"
+  },
+  "bf-circle-img": {
+    "borderRadius": "44",
+    "overflow": "hidden",
+    "marginRight": "30"
+  },
+  "bf-service-tel": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "service-tel-hello": {
+    "fontSize": "32",
+    "color": "#333333",
+    "lineHeight": "55"
+  },
+  "service-tel-text": {
+    "fontSize": "28",
+    "color": "#333333",
+    "lineHeight": "45",
+    "marginLeft": "15"
+  },
+  "center-rent-btn": {
+    "width": "750",
+    "backgroundColor": "#ffffff",
+    "flexDirection": "row",
+    "justifyContent": "space-around",
+    "paddingLeft": "30",
+    "paddingRight": "30",
+    "paddingTop": "20"
+  },
+  "normal-btn": {
+    "width": "336",
+    "height": "80",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "borderWidth": "1",
+    "borderColor": "#F89531",
+    "borderRadius": "4"
+  },
+  "normal-btn-font": {
+    "color": "#F89531",
+    "fontSize": "32",
+    "fontWeight": "700"
+  },
+  "normal-btn-bc": {
+    "width": "336",
+    "height": "80",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "borderWidth": "1",
+    "borderColor": "#F89531",
+    "backgroundColor": "#F89531",
+    "borderRadius": "4"
+  },
+  "normal-btn-bc-font": {
+    "fontSize": "32",
+    "fontWeight": "400",
+    "color": "#FFFFFF"
   }
 }
 
@@ -25648,7 +25716,7 @@ exports.default = {
             var that = this;
             setTimeout(function () {
                 that.moreDeviceshow = false;
-            }, 500);
+            }, 100);
         },
 
         // 客服电话
@@ -25661,10 +25729,25 @@ exports.default = {
             var that = this;
             setTimeout(function () {
                 that.serviceshow = false;
-            }, 500);
+            }, 100);
         }
     }
 }; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -26140,6 +26223,9 @@ exports.default = {
     methods: {
         wxcPopupOverlayClicked: function wxcPopupOverlayClicked() {
             this.$emit("popupOverlayClicked");
+
+            this.$emit("handlePupopClose");
+            this.$refs.wxcPopup.hide();
         },
         handlePupopClose: function handlePupopClose() {
             this.$emit("handlePupopClose");
@@ -26691,18 +26777,58 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("空调")])])])]), _c('ert-popup', {
     attrs: {
       "title": "客服电话",
-      "height": 500,
+      "height": 425,
       "pupopShow": _vm.serviceshow
     },
     on: {
       "handlePupopClose": _vm.servicePupopClose
     }
   }, [_c('div', {
-    staticClass: ["bf-flex-row"],
+    staticClass: ["bf-service-box"]
+  }, [_c('image', {
+    staticClass: ["bf-circle-img"],
     staticStyle: {
-      paddingTop: "30px"
+      width: "88px",
+      height: "88px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/home/houseSelection.png"
     }
-  }, [_c('text', [_vm._v("客服电话")])])])], 1)
+  }), _c('div', [_c('text', {
+    staticClass: ["service-tel-hello"]
+  }, [_vm._v("下午好～尊敬的用户")]), _c('div', {
+    staticClass: ["bf-service-tel"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "32px",
+      height: "32px"
+    },
+    attrs: {
+      "src": "/src/imgs/easyRent/tel-icon.png"
+    }
+  }), _c('text', {
+    staticClass: ["service-tel-text"]
+  }, [_vm._v("188 8888 8888")])])])]), _c('div', {
+    staticClass: ["center-rent-btn"]
+  }, [_c('div', {
+    staticClass: ["normal-btn"],
+    on: {
+      "click": function($event) {
+        _vm.leftBtnClick()
+      }
+    }
+  }, [_c('text', {
+    staticClass: ["normal-btn-font"]
+  }, [_vm._v("复制电话号码")])]), _c('div', {
+    staticClass: ["normal-btn-bc"],
+    on: {
+      "click": function($event) {
+        _vm.rightBtnClick()
+      }
+    }
+  }, [_c('text', {
+    staticClass: ["normal-btn-bc-font"]
+  }, [_vm._v("拨打电话")])])])])], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["rent-header-left"]

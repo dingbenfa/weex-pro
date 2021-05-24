@@ -1,3 +1,4 @@
+// 安心租--页面模块头部
 <template>
     <div class="bf-list-title">
         <image class="bf-title-icon" src="/src/imgs/easyRent/home/suxian.png"></image>

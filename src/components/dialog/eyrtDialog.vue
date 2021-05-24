@@ -1,3 +1,4 @@
+// 安心租--dialog
 <template>
   <div class="wrapper">
     <wxc-overlay v-if="show" :show="true" :hasAnimation="false" opacity="0.5"></wxc-overlay>

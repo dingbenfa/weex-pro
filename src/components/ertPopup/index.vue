@@ -55,6 +55,9 @@ export default {
     methods: {
         wxcPopupOverlayClicked() {
             this.$emit("popupOverlayClicked");
+
+            this.$emit("handlePupopClose");
+            this.$refs.wxcPopup.hide();
         },
         handlePupopClose() {
             this.$emit("handlePupopClose");

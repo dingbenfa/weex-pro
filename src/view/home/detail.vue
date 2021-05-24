@@ -210,10 +210,25 @@
         </ert-popup>
 
         <!-- 客服电话 -->
-        <ert-popup title="客服电话" :height="500" :pupopShow="serviceshow" @handlePupopClose="servicePupopClose">
-            <div class="bf-flex-row" style="padding-top:30px;">
-                <text>客服电话</text>
-            </div>            
+        <ert-popup title="客服电话" :height="425" :pupopShow="serviceshow" @handlePupopClose="servicePupopClose">
+            <div class="bf-service-box">
+                <image class="bf-circle-img" src="/src/imgs/easyRent/home/houseSelection.png" style="width:88px;height:88px"></image>
+                <div>
+                    <text class="service-tel-hello">下午好～尊敬的用户</text>
+                    <div class="bf-service-tel">
+                        <image src="/src/imgs/easyRent/tel-icon.png" style="width:32px;height:32px"></image>
+                        <text class="service-tel-text">188 8888 8888</text>
+                    </div>
+                </div>
+            </div>
+            <div class="center-rent-btn">
+                <div class="normal-btn" @click="leftBtnClick()">
+                    <text class="normal-btn-font">复制电话号码</text>
+                </div>
+                <div class="normal-btn-bc" @click="rightBtnClick()">
+                    <text class="normal-btn-bc-font">拨打电话</text>
+                </div>
+            </div>      
         </ert-popup>
     </scroller>
 </template>
@@ -222,7 +237,6 @@
 import ListHearder from "@/components/listHeader/index";
 import CustomBtn from "@/components/customBtn/index";
 import ertPopup from "@/components/ertPopup/index";
-
 
 export default {
     name: "RentHomeDetail",
@@ -256,7 +270,7 @@ export default {
             let that = this;
             setTimeout(function(){
                 that.moreDeviceshow = false
-            },500)
+            },100)
         },
         // 客服电话
         handleServiceTel() {
@@ -267,7 +281,7 @@ export default {
             let that = this;
             setTimeout(function(){
                 that.serviceshow = false
-            },500)
+            },100)
         },
         
     }
@@ -276,6 +290,8 @@ export default {
 </script>
 
 <style scoped>
+ /* @import '@/styles/common.css'; */
+
 .bf-rent-container{
     width: 750px;
     align-items: center;
@@ -436,6 +452,83 @@ export default {
     left: 0;
     right: 0;
     background-color:#ffffff;
+}
+
+.bf-service-box{
+    flex-direction: row;
+    padding-left: 30px;
+    border-bottom-width: 1px;
+    border-bottom-color: #EBEDF0;
+    height: 190px;
+    align-items: center;
+}
+
+.bf-circle-img{
+    border-radius: 44px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.bf-service-tel{
+    flex-direction: row;
+    align-items: center;
+}
+
+.service-tel-hello{
+    font-size: 32px;
+    color: #333333;
+    line-height: 55px;
+}
+
+.service-tel-text{
+    font-size: 28px;
+    color: #333333;
+    line-height: 45px;
+    margin-left: 15px;
+}
+
+/* 按钮 */
+.center-rent-btn {
+    width: 750px;
+    background-color: #fff;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px; 
+}
+
+.normal-btn {
+    width: 336px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-color: #F89531;
+    border-radius: 4px;
+}
+
+.normal-btn-font {
+    color: #F89531;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.normal-btn-bc {
+    width: 336px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-color: #F89531;
+    background-color: #F89531;
+    border-radius: 4px;
+}
+
+.normal-btn-bc-font {
+    font-size: 32px;
+    font-weight: 400;
+    color: #FFF;
 }
 
 </style>

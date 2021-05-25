@@ -1,10 +1,13 @@
 <template>
-    <!--btn-->
+    <!--单个btn（安心租）-->
     <div>
         <div class="btn" @click="sureClick()">
-            <image class="loginBgimg" src="./imgs/securityCenter/loginBg.png"></image>
             <text class="btnFont">{{title}}</text>
         </div>
+    <!--    <div class="btn" @click="sureClick()">
+            <image class="loginBgimg" src="./imgs/securityCenter/loginBg.png"></image>
+            <text class="btnFont">{{title}}</text>
+        </div>-->
     </div>
 </template>
 
@@ -28,14 +31,18 @@
 
 <style scoped>
     .btn {
-        width: 750px;
-        height: 142px;
+        width: 686px;
+        height: 80px;
+        background-image: linear-gradient(to right, #F9C300, #F89531);
+        border-radius: 2px;
         justify-content: center;
         align-items: center;
+        margin-top: 56px;
+        margin-bottom: 56px;
     }
 
     .loginBgimg {
-        height: 142px;
+        height: 112px;
         width: 690px;
         position: absolute;
         left: 30px;
@@ -44,9 +51,9 @@
 
     .btnFont {
         font-size: 32px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
         color: #FFFFFF;
-        font-weight: 700;
-        margin-top: -30px;
     }
 
 </style>

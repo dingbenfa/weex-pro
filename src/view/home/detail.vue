@@ -1,12 +1,17 @@
+// created by dingbenfa
+// 房源展示 -- 详情
 <template>
     <scroller>
-
+        
         <div class="bf-rent-container">
             <div style="padding-left:30px;">
                 <div class="bf-rent-header">
                     <div class="rent-header-left">
                         <div  class="rent-title-box">
-                            <text class="rent-title-pri">¥ 2800 </text>
+                            <div class="bf-price-text">
+                                <text class="bf-money-icon">¥</text>
+                                <text class="rent-title-pri">2800</text>
+                            </div>
                             <text class="rent-title-label"> 元/月</text>
                         </div>
                         <text class="bf-font-sign">瑞丽上层21栋一单元 2420号</text>
@@ -70,6 +75,11 @@
                      <image src="/src/imgs/easyRent/home/device-icon.png" style="width:64px;height:64px"></image>
                      <text class="bf-font-grey">更多</text>
                 </div>
+            </div>
+
+            <list-hearder title="其他房间"></list-hearder>
+            <div style="padding-top: 10px;">
+                <room-list></room-list>
             </div>
 
             <list-hearder title="地理位置"></list-hearder>
@@ -230,6 +240,16 @@
                 </div>
             </div>      
         </ert-popup>
+        
+        <!-- 没有电子账户tips -->
+        <dialog
+            :show="AccountOpenShow"
+            @confirm="handleOpen"
+            @cancel="handleNotOpen"
+            content="因付款需要农商银行电子账户，检测到您还没有农商行电子账户，是否开通？"
+            left="不开通"
+            right="开通"
+        ></dialog>
     </scroller>
 </template>
 
@@ -238,6 +258,9 @@ import ListHearder from "@/components/listHeader/index";
 import CustomBtn from "@/components/customBtn/index";
 import ertPopup from "@/components/ertPopup/index";
 
+import Dialog from "@/components/dialog/eyrtDialog";
+import RoomList from "./components/roomList";
+
 export default {
     name: "RentHomeDetail",
     data() {
@@ -245,17 +268,20 @@ export default {
             isCollection: false,
             moreDeviceshow: false,
             serviceshow: false,
+            AccountOpenShow: false,
         }
     },
     components: {
         ListHearder,
         CustomBtn,
-        ertPopup
+        ertPopup,
+        Dialog,
+        RoomList,
     },
     methods: {
         // 下单
         handleToOrder() {
-
+            this.AccountOpenShow = true
         },
         // 收藏
         handleCollection() {
@@ -283,7 +309,14 @@ export default {
                 that.serviceshow = false
             },100)
         },
-        
+        // 电子账户开通
+        handleOpen() {
+            this.AccountOpenShow = false;
+        },
+        // 电子账户不开通
+        handleNotOpen() {
+            this.AccountOpenShow = false;
+        },
     }
 }
 
@@ -328,6 +361,18 @@ export default {
     flex-direction: row;
     align-items: center;
     padding-bottom: 20px;
+}
+
+.bf-price-text{
+	flex-direction: row;
+}
+
+.bf-money-icon{
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 49px;
+	color: #FE7214;
+    margin-right: 10px;
 }
 
 .rent-title-pri{
@@ -432,6 +477,7 @@ export default {
     padding-left:30px;
     padding-right:30px;
     padding-bottom:15px;
+    padding-top: 15px;
 }
 
 .bf-device-box{

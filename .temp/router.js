@@ -3,26 +3,39 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import AppHome from '@/view/home/index'
 import RentHomeDetail from '@/view/home/detail'
+import OffShelfDetail from '@/view/home/offShelfDetail'
 import AppSearch from '@/view/search/index'
+import ReleaseHouses from '@/view/releaseHouses/index'
+
+// import Amap from '@/view/amap/index'
 
 Vue.use(Router)
 
 export const router = new Router({
   routes: [
     {
-      path: '/AppHome',
-      name: 'AppHome',
+      path: '/',
       component: AppHome
     },
     {
-      path: '/',
-      name: 'RentHomeDetail',
+      path: '/rentHomeDetail',
       component: RentHomeDetail
     },
     {
       path: '/appSearch',
-      name: 'AppSearch',
       component: AppSearch
     },
+    {
+      path: '/OffShelfDetail',
+      component: OffShelfDetail
+    },
+    // {
+    //   path: '/amap',
+    //   component: Amap
+    // },
+    // {
+    //   path: '/',
+    //   component: ReleaseHouses
+    // },
   ]
 })

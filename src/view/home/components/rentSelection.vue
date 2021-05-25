@@ -69,6 +69,7 @@
                         </div>
                     </div>
                 </div>
+
                 <page-bottom-btn leftTitle="清空" rightTitle="确定" @leftBtnClick="handleClearSelect" @rightBtnClick="handleSelect"></page-bottom-btn>
             </scroller>
         </wxc-popup>
@@ -88,7 +89,7 @@ export default {
     props: {
         show: {
             type: Boolean,
-            default: true
+            default: false
         }
     },
     components: {
@@ -148,11 +149,14 @@ export default {
             this.areaSel= '全贵阳'
             this.rentTypeSel='全部'
             this.brandSel='全部'
-            this.$emit("handleClearSelect", false);
+
+            this.$emit("handleClearSelect");
+            this.$refs.wxcPopup.hide();
         },
         // 确定筛选
         handleSelect() {
             this.$emit("emitParams", { param: 999});
+            this.$refs.wxcPopup.hide();
         },
         handlePupopClose() {
             this.$refs.wxcPopup.hide();

@@ -1,3 +1,5 @@
+// created by dingbenfa
+// 房源展示 -- 首页
 <template>
   <list>
     <header>
@@ -117,19 +119,19 @@ export default {
       headerMenuShow: false,
       dialogType: 1,
       agreementDialog: {
-        show: true,
+        show: false,
         message: "以下展示房源的租客以及房屋所有权人租金由贵阳农商银行监管，确保租客和防护所有权人租金安全；房源运营由房屋租赁企业运营。",
         leftBtn: "取消",
         rightBtn: "我已知晓",
       },
       positionInfoDialog: {
-        show: true,
+        show: false,
         message: "是否允许“安心租”获取您的位置信息",
         leftBtn: "不允许",
         rightBtn: "允许",
       },
       positionOherDialog: {
-        show: true,
+        show: false,
         message: "定位您的位置为“成都市”，是否切换",
         leftBtn: "否",
         rightBtn: "是",
@@ -250,19 +252,24 @@ export default {
           }
       },
       // 筛选清空
-      handleClearSelect(e) {
-        const el = this.$refs.headerMenu
-        dom.scrollToElement(el, { offset: 0, animated: false })
+      handleClearSelect() {
+        let that = this;
+        setTimeout(() => {
+          that.rentSelectShow = false
 
-        this.rentSelectShow = false
+          const el = this.$refs.headerMenu
+          dom.scrollToElement(el, { offset: 0, animated: false })
+        }, 100);
       },
       // 筛选确认
       handleQueryParam(param) {
-        const el = this.$refs.listHeader
-        dom.scrollToElement(el, { offset: -190 })
+        let that = this;
+        setTimeout(() => {
+          that.rentSelectShow = false
 
-        this.rentSelectShow = false;
-        
+          const el = this.$refs.listHeader
+          dom.scrollToElement(el, { offset: -190 })
+        }, 100);
         // modal.toast({ message: param, duration: 1 })
       }
   },

@@ -1,3 +1,5 @@
+// created by dingbenfa
+// 房源展示 -- 首页搜索
 <template>
     <div class="bf-searchbar-container">
         <div class="bf-searchbar-back" @click="pageBack">

@@ -1,5 +1,5 @@
 // created by dingbenfa
-// 房源展示 -- 房源列表
+// 房源展示 -- 房间列表
 <template>
 	<div class="bf-list-container">
 		<div class="bf-list-card" v-for="(item, key) in houseList" :key="key">
@@ -7,12 +7,18 @@
 				<image class="bf-list-img" src="https://gd2.alicdn.com/bao/uploaded/i2/T14H1LFwBcXXXXXXXX_!!0-item_pic.jpg"></image>
 			</div>
 			<div class="bf-list-body" @click="gotoItem(item)">
-				<text class="bf-list-name">瑞丽上层21栋一单元 2420号 朝南 观山湖会展中心</text>
-				<text class="bf-list-cell">¥ 2800/月</text>
-				<div class="bf-lable-box">
-					<div class="bf-list-lable bf-bj-yellow"><text class="bf-lable-yellow">整租</text></div>
-					<div class="bf-list-lable bf-bj-blue"><text class="bf-lable-blue">两室一厅</text></div>
-					<div class="bf-list-lable bf-bj-blue"><text class="bf-lable-blue">68㎡</text></div>
+				<div>
+					<text class="bf-list-name">瑞丽上层21栋一单元 2420号 朝南 观山湖会展中心</text>
+					<text class="bf-room-lable">17m² / 朝北 / 有阳台 / 大床 / 有卫生间 / 有卫生间 / 有卫生间</text>
+				</div>
+				<div class="bf-price-box">
+					<div class="bf-price-text">
+						<text class="bf-money-icon">¥</text>
+						<text class="bf-list-cell">2800/月</text>
+					</div>
+					<div class="bf-small-btn" @click="handleToRoomInfo">
+						<text class="small-btn-text">查看房源</text>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -54,7 +60,11 @@ export default {
 		},
 		gotoItem(item){
 			context.launchStage(item.url);
-		}
+		},
+		// 查看房源详情
+		handleToRoomInfo() {
+
+		},
 	}
 }
 </script>
@@ -98,7 +108,7 @@ export default {
 	line-height: 42px;
 	color: #333333;
 	text-overflow: ellipsis;
-	lines: 2;
+	lines: 1;
 }
 
 .bf-list-cell{
@@ -108,25 +118,12 @@ export default {
 	color: #FE7214;
 }
 
-.bf-lable-box{
-	flex-direction: row;
-}
-
-.bf-list-lable{
-	margin-right: 10px;
-	padding-left: 16px; 
-	padding-right: 16px; 
-	padding-top: 4px;
-	padding-bottom: 4px;
-	border-radius: 1px;
-}
-
-.bf-bj-yellow{
-	background-color: #FFEECB;
-}
-
-.bf-bj-blue{
-	background-color: #DFECFF;
+.bf-room-lable{
+	font-size: 24px;
+	color: #999999;
+	text-overflow: ellipsis;
+	lines: 2;
+	line-height: 36px;
 }
 
 .bf-lable-yellow{
@@ -137,5 +134,37 @@ export default {
 	color: #465198;
 }
 
+.bf-price-text{
+	flex-direction: row;
+}
+
+.bf-money-icon{
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 44px;
+	color: #FE7214;
+	margin-right: 10px;
+}
+
+.bf-small-btn{
+	width: 144px;
+	height: 52px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FE7214;
+	justify-content: center;
+	align-items: center;
+}
+
+.small-btn-text{
+	font-size: 28px;
+	color: #FE7214;
+}
+
+.bf-price-box{
+	flex-direction: row;
+	justify-content: space-between;
+}
 
 </style>

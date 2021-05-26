@@ -1,5 +1,5 @@
 // created by dingbenfa
-// 房源展示 -- 发布房源结果
+// 我是房东 -- 发布房源结果
 <template>
     <div class="bf-container">
         <div class="bf-top-bar"><text class="bf-bar-text">结果</text></div>

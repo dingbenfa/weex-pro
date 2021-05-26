@@ -37,8 +37,8 @@
         border-radius: 2px;
         justify-content: center;
         align-items: center;
-        margin-top: 56px;
-        margin-bottom: 56px;
+        margin-top: 16px;
+        margin-bottom: 16px;
     }
 
     .loginBgimg {

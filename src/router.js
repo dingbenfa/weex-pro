@@ -5,6 +5,8 @@ import RentHomeDetail from '@/view/home/detail'
 import OffShelfDetail from '@/view/home/offShelfDetail'
 import AppSearch from '@/view/search/index'
 import ReleaseHouses from '@/view/releaseHouses/index' //我是房东 - 发布房源
+import ReleaseList from '@/view/releaseHouses/releaseList' //我是房东 - 发布列表
+import ReleaseDetails from '@/view/releaseHouses/details' //我是房东 - 房屋详情
 import NotReleaseHouses from '@/view/releaseHouses/notRelease' //我是房东 - 未发布房源 
 import ReleaseHistory from '@/view/releaseHouses/releaseHistory' //我是房东 - 发布记录
 import ReleaseResult from '@/view/releaseHouses/releaseResult' //我是房东 - 发布结果
@@ -36,7 +38,7 @@ export const router = new Router({
     //   component: Amap
     // },
     {
-      path: '/',
+      path: '/releaseHouses',
       component: ReleaseHouses
     },
     {
@@ -50,6 +52,14 @@ export const router = new Router({
     {
       path: '/releaseResult',
       component: ReleaseResult
+    },
+    {
+      path: '/releaseList',
+      component: ReleaseList
+    },
+    {
+      path: '/releaseDetails',
+      component: ReleaseDetails
     },
   ]
 })

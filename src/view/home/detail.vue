@@ -1,7 +1,7 @@
 // created by dingbenfa
 // 房源展示 -- 详情
 <template>
-    <scroller>
+    <scroller style="flex: 1;" show-scrollbar="false">
         
         <div class="bf-rent-container">
             <div style="padding-left:30px;">
@@ -232,10 +232,10 @@
                 </div>
             </div>
             <div class="center-rent-btn">
-                <div class="normal-btn" @click="leftBtnClick()">
+                <div class="normal-btn" @click="handleCopyTel()">
                     <text class="normal-btn-font">复制电话号码</text>
                 </div>
-                <div class="normal-btn-bc" @click="rightBtnClick()">
+                <div class="normal-btn-bc" @click="handleCallTel()">
                     <text class="normal-btn-bc-font">拨打电话</text>
                 </div>
             </div>      
@@ -260,6 +260,8 @@ import ertPopup from "@/components/ertPopup/index";
 
 import Dialog from "@/components/dialog/eyrtDialog";
 import RoomList from "./components/roomList";
+
+const clipboard = weex.requireModule('clipboard')
 
 export default {
     name: "RentHomeDetail",
@@ -308,6 +310,14 @@ export default {
             setTimeout(function(){
                 that.serviceshow = false
             },100)
+        },
+        // 复制电话号码
+        handleCopyTel() {
+            clipboard.setString("188 8888 8888")
+        },
+        // 拨打电话
+        handleCallTel() {
+
         },
         // 电子账户开通
         handleOpen() {
@@ -500,6 +510,7 @@ export default {
     background-color:#ffffff;
 }
 
+/* 客服电话 */
 .bf-service-box{
     flex-direction: row;
     padding-left: 30px;
@@ -576,5 +587,6 @@ export default {
     font-weight: 400;
     color: #FFF;
 }
+/* 客服电话end */
 
 </style>

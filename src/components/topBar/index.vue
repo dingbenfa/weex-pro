@@ -1,20 +1,25 @@
 <template>
-   <!-- 顶部返回加title-->
+    <!-- 顶部返回加title-->
     <div>
-        <mp-bar :title="title"
-                :barStyle="barStyle"
+        <mp-bar
+                :title="title"
                 :titleStyle="titleStyle"
+                :barStyle="barStyle"
                 :leftBtn="leftBtn"
                 :leftBtnStyle="leftBtnStyle"
-                @mpBarLeftBtnClick="mpBarLeftBtnClick"></mp-bar>
+                @mpBarLeftBtnClick="mpBarLeftBtnClick"
+                :rightTxt="rightTxt"
+                @mpBarRightBtnClick="mpBarRightBtnClick"
+                :rightTxtStyle="rightTxtStyle"></mp-bar>
     </div>
 </template>
 
 <script>
-    import { MpBar } from "madp-ui";
+    import {MpBar} from "madp-ui";
+
     export default {
         name: "index",
-        components:{
+        components: {
             MpBar
         },
         props: {
@@ -22,7 +27,7 @@
                 type: String,
                 default: ""
             },
-            barStyle:{
+            barStyle: {
                 type: Object,
                 default: function () {
                     return {
@@ -32,12 +37,12 @@
                 },
                 required: false
             },
-            leftBtn:{
+            leftBtn: {
                 type: String,
                 default: "./imgs/back.png",
                 required: false
             },
-            leftBtnStyle:{
+            leftBtnStyle: {
                 type: Object,
                 default: function () {
                     return {
@@ -47,7 +52,7 @@
                 },
                 required: false
             },
-            titleStyle:{
+            titleStyle: {
                 type: Object,
                 default: function () {
                     return {
@@ -59,10 +64,32 @@
                 },
                 required: false
             },
+            rightTxtStyle: {
+                type: Object,
+                default: function () {
+                    return {
+                        "font-size": "26px",
+                        "font-family": "PingFangSc-Regular",
+                        "color": "rgb(116, 116, 116)"
+                    }
+                },
+            },
+            rightTxt: {
+                type: String,
+                default: ""
+            }
         },
-        methods:{
-            mpBarLeftBtnClick(){
+        methods: {
+            mpBarLeftBtnClick() {
                 this.goBack();
+            },
+            /**
+             * @event mpBarRightBtnClick
+             * @description 点击右部区域触发事件
+             * @param {Object} event  event
+             */
+            mpBarRightBtnClick(event) {
+                this.$emit("mpBarRightBtnClick", event);
             },
         }
     }

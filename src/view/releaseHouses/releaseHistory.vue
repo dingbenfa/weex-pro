@@ -1,5 +1,7 @@
+// created by dingbenfa
+// 我是房东 -- 发布记录
 <template>
-    <scroller>
+    <scroller style="flex: 1;" show-scrollbar="false">
         <div class="bf-container">
             <!-- <top-bar title="发布记录"></top-bar> -->
 
